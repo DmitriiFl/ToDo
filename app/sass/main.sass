@@ -1,0 +1,157 @@
+*
+  margin: 0
+  padding: 0
+body
+  font-family: 'Roboto', sans-serif
+  input
+    font-family: 'Roboto', sans-serif
+    font-size: 16px
+    width: 100%
+    padding: 10px 20px
+    box-sizing: border-box
+    border: 1px solid #dfdfdf
+    outline: 0
+    -webkit-border-radius: 5px
+    -moz-border-radius: 5px
+    border-radius: 5px
+    &:focus
+      box-shadow: 1px 5px 10px 0 #dfdffa
+.wrap
+  width: 980px
+  margin: 50px auto 0
+  form
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .form_block
+      width: 40%
+      .custom-select-wrapper  
+        position: relative
+        user-select: none
+        .custom-select
+          position: relative
+          display: flex
+          flex-direction: column
+          border: 1px solid #dfdfdf
+          border-radius: 5px
+          input
+            padding: 0
+            border: 0
+          .custom-select__trigger
+            padding: 10px 20px
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: space-between
+            cursor: pointer
+            span
+              width: 100%
+              input
+                padding: 10px 20px
+          .custom-options
+            border: 1px solid #dfdfdf
+            border-radius: 5px
+            position: absolute
+            display: block
+            top: 100%
+            left: 0
+            right: 0
+            background: #fff
+            transition: all 0.5s
+            opacity: 0
+            visibility: hidden
+            pointer-events: none
+            z-index: 2
+            .custom-option
+              padding: 10px 20px
+              position: relative
+              display: block
+              cursor: pointer
+              transition: all 0.5s
+              border: 1px solid transparent
+              &:hover
+                cursor: pointer
+                border: 1px solid #dfdfdf
+                border-radius: 5px
+        .custom-select.open
+          .arrow::before
+            left: 0
+            transform: rotate(45deg)
+          .arrow:after
+            left: 5px
+            transform: rotate(-45deg)
+        .custom-select.open .custom-options
+              opacity: 1
+              visibility: visible
+              pointer-events: all
+    button
+      cursor: pointer
+      padding: 10px 30px
+      font-family: Roboto
+      border-radius: 5px
+      background-color: #f2f2f2
+      border: 1px solid #d9d9d9
+      outline: none
+      &:active
+        background-color: #ccc
+
+.list_container
+  ul
+    display: flex
+    li
+      list-style: none
+      cursor: pointer
+  .list-nav
+    ul
+      display: flex
+      li
+        padding: 5px 10px
+        border: 1px solid #dfdfdf
+        border-radius: 5px 5px 0 0
+        background-color: #f2f2f2
+        &:hover
+          background-color: #ccc
+        &.active
+          color: #ffffff
+          font-weight: 600
+          background-color: #bbbbbb
+  .list-content
+    border: 1px solid #d9d9d9
+    .list-item
+      display: flex
+      justify-content: space-around
+      align-items: center
+      padding: 10px 0
+      border-bottom: 1px solid #d9d9d9
+      &:last-of-type
+        border: 0
+      .desc, .buttons
+        width: 75%
+      .buttons
+        width: 15%
+        ul
+          display: flex
+          align-items: center
+          justify-content: space-between
+        .fa
+          font-size: 23px
+          color: #bbbbbb
+          width: 24px
+        .fa-trash-o, .fa-minus-square-o
+          &:hover
+            color: #ff0000
+        .fa-check-square-o
+          color: #00e600
+        .fa-pencil-square-o
+          &:hover
+            color: #ff6600
+      &.done
+        .desc
+          text-decoration: line-through
+          opacity: 0.5
+        //.buttons
+        //  #done
+        //    .fa-square-o
+        //      color: #00e600
+
+

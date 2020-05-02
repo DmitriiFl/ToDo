@@ -1,0 +1,50 @@
+section.contact_info
+    .container
+        .form
+            .form_block.input_name
+                .label Ваше имя
+                .input
+                    input(type="text", value="Дмит", placeholder="Введите Ваше имя")
+            .form_block.input_email
+                .label E-mail
+                .input
+                    input(type="email", placeholder="Введите свою почту")
+            .form_block.input_code
+                .label Укажите код подтверждения
+                .code_holder
+                    img(src="images/contact_code_placeholder.png", style="min-width: 100%; min-height: 100%")
+                .input
+                    input(type="text", placeholder="Введите код")
+            .form_block.input_text
+                .label Куда хотите поехать?
+                .input
+                    textarea(type="text", placeholder="Напишите общие впечатление")
+            a.learn_more
+                |   Написать
+
+        .contacts
+            .text_contacts
+                span Адрес <br>
+                |   Carrer Juan Alonso Rudian 4
+                .hr
+                span Телефон <br>
+                |   (+34) -653 378 193
+                .hr
+                span Email <br>
+                |   info@migtour.com
+                .hr
+                span Социальные сети
+
+                .contacts_social
+                    a.social_icon
+                        svg.icon.icon-fb
+                            use(xlink:href="images/svg/sprite.svg#icon-facebook")
+                    a.social_icon
+                        svg.icon.icon-in
+                            use(xlink:href="images/svg/sprite.svg#icon-instagram")
+                    a.social_icon(href="#")
+                        svg.icon.icon-yt
+                            use(xlink:href="images/svg/sprite.svg#icon-youtube")
+            .map_contacts
+                .img_holder
+                    img(src="images/contact_map_placeholder.png", style="min-width: 100%; min-height: 100%")

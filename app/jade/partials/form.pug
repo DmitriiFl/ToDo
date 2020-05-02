@@ -1,0 +1,23 @@
+section.form_container
+    .wrap
+        .form
+            form(id='create', method="post")
+                .form_block.input_title
+                    .input
+                        input(type="text", name="title", value="Что нужно сделать"
+                        onfocus="if(this.value == 'Что нужно сделать') {this.value = ''}"
+                        onblur="if(this.value == ''){this.value = 'Что нужно сделать'}")
+
+                .form_block.input_category
+                    .custom-select-wrapper
+                        .custom-select
+                            .custom-select__trigger
+                                span(data-value="") Категория
+                            .custom-options
+                                span.custom-option.custom-option-input(data-value="add_category")
+                                    input(type="text" id="new_category" name="new_category" value="Новая категория..."
+                                        onfocus="if(this.value == 'Новая категория...') {this.value = ''}"
+                                        onblur="if(this.value == ''){this.value = 'Новая категория...'}")
+                                //span.custom-option(data-value="playbacks") Плейбеки
+                                //span.custom-option(data-value="neww_songs") Новые песни
+                button Создать
